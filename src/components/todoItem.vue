@@ -1,10 +1,13 @@
 <template>
 
-  <div :class="`todo-item ${todo.done && 'done'}`">
-
+  <div :class="`todo-item ${todo.done && 'done'}`" >
     <label>
       <input type="checkbox" v-model="todo.done"/>
-      <span class="bubble"></span>
+      <span class="bubble" v-if="todo.done"></span>
+      <span class="bubble high" v-else-if="todo.category==='high'"></span>
+      <span class="bubble medium" v-else-if="todo.category==='medium'"></span>
+      <span class="bubble normal" v-else></span>
+
     </label>
 
     <div class="todo-content">
@@ -86,6 +89,7 @@ label {
 .todo-content input {
   color: var(--dark);
   font-size: 1.125rem;
+  width: 100%;
 }
 
 .actions {

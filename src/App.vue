@@ -16,6 +16,8 @@ export default {
 
   }, mounted() {
     this.items = JSON.parse(localStorage.getItem('items')) || []
+  }, created() {
+    document.title = "Focus List"
   },
   watch: {
     items: {
@@ -45,12 +47,11 @@ body {
 
 :root {
   --theme: rgb(93, 157, 238);
-  --primary: #EA40A4;
 
   --light: #EEE;
   --grey: #888;
   --dark: #313154;
-  --danger: #ff5b57;
+  --danger: #fd4440;
 
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
@@ -104,6 +105,57 @@ h4 {
 input[type="radio"],
 input[type="checkbox"] {
   display: none;
+}
+
+.bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid;
+  margin-right: 5px;
+}
+
+.bubble::after {
+  content: "";
+  display: block;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+}
+
+.bubble.high {
+  border-color: var(--high);
+  box-shadow: var(--high-glow);
+}
+
+.bubble.high::after {
+  background-color: var(--high);
+  box-shadow: var(--high-glow);
+}
+
+.bubble.medium {
+  border-color: var(--medium);
+  box-shadow: var(--medium-glow);
+}
+
+.bubble.medium::after {
+  background-color: var(--medium);
+  box-shadow: var(--medium-glow);
+}
+
+.bubble.normal {
+  border-color: var(--normal);
+  box-shadow: var(--normal-glow);
+}
+
+.bubble.normal::after {
+  background-color: var(--normal);
+  box-shadow: var(--normal-glow);
 }
 
 </style>
