@@ -4,10 +4,11 @@ import TodoOverview from "@/components/todoOverview.vue";
 import TodoItem from "@/components/todoItem.vue";
 import TopBar from "@/components/topBar.vue";
 import CreateTodo from "@/components/createTodo.vue";
+import ClockSetting from "@/components/clockSetting.vue";
 
 export default {
   name: "App",
-  components: {CreateTodo, TodoOverview, TodoItem, TopBar},
+  components: {ClockSetting, CreateTodo, TodoOverview, TodoItem, TopBar},
   data() {
     return {
       items: []
@@ -33,6 +34,7 @@ export default {
 
 <template>
   <top-bar/>
+  <clock-setting/>
   <create-todo :items="items"/>
 <!--  {{ items }}-->
   <todo-overview :items="items"/>
