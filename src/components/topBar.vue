@@ -6,8 +6,8 @@
       <img :src="langImage" alt="language" width="20" height="20"/>
     </button>
     <ul v-show="showLanguageMenu">
-      <li class="option" @click="switchLanguage('en')">English</li>
-      <li class="option" @click="switchLanguage('zh')">中文</li>
+      <li class="option" @click="switchLanguage('en-US')">English</li>
+      <li class="option" @click="switchLanguage('zh-CN')">中文</li>
     </ul>
   </div>
 
