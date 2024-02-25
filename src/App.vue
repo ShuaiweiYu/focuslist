@@ -13,9 +13,7 @@ export default {
     return {
       items: []
     }
-  }, methods: {
-
-  }, mounted() {
+  }, methods: {}, mounted() {
     this.items = JSON.parse(localStorage.getItem('items')) || []
   }, created() {
     document.title = "Focus List"
@@ -36,7 +34,6 @@ export default {
   <top-bar/>
   <clock-setting/>
   <create-todo :items="items"/>
-<!--  {{ items }}-->
   <todo-overview :items="items"/>
 </template>
 

@@ -1,0 +1,40 @@
+{
+  "topBar": {
+    "name": "请在这里输入您的名字",
+    "greeting": "您好，",
+    "morning": "早上好，",
+    "afternoon": "下午好，",
+    "evening": "晚上好，"
+  },
+  "statistics": {
+    "name": "待办事项统计",
+    "finished": "已完成待办事项：",
+    "unfinished": "未完成待办事项："
+  },
+  "creation": {
+    "name": "创建待办事项",
+    "title": "在这里输入您的待办事项",
+    "hint": "你今天想做些什么？",
+    "priority": "选择优先级",
+    "high": "紧急",
+    "medium": "中等",
+    "normal": "普通",
+    "submit": "添加"
+  },
+  "items": {
+    "delete": "删除"
+  },
+  "overviews": {
+    "finished": "已完成事项",
+    "unfinished": "未完成事项"
+  },
+  "pomodoro": {
+    "start": "开始",
+    "stop": "结束",
+    "work": "设置专注时间",
+    "rest": "设置休息时间",
+    "time": "分钟",
+    "leftWorkTime": "剩余专注时间：",
+    "leftRestTime": "剩余休息时间："
+  }
+}

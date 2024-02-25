@@ -15,7 +15,7 @@
     </div>
 
     <div class="actions">
-      <button class="delete" @click="removeTodo(todo)">Delete</button>
+      <button class="delete" @click="removeTodo(todo)">{{ $t('items.delete') }}</button>
     </div>
   </div>
 

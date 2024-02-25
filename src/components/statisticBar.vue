@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h2 v-if="finishedTodos!==0 || unfinishedTodos !==0">Todo Overview</h2>
+    <h2 v-if="finishedTodos!==0 || unfinishedTodos !==0">{{ $t('statistics.name') }}</h2>
     <div class="statistic">
-      <p v-if="unfinishedTodos !== 0">Number of todos: {{unfinishedTodos}}</p>
-      <p v-if="finishedTodos !== 0">Number of finished todos: {{finishedTodos}}</p>
+      <p v-if="unfinishedTodos !== 0">{{ $t('statistics.unfinished') }}{{unfinishedTodos}}</p>
+      <p v-if="finishedTodos !== 0">{{ $t('statistics.finished') }}{{finishedTodos}}</p>
     </div>
 
   </div>

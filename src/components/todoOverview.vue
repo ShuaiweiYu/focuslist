@@ -3,7 +3,7 @@
   <section class="todo-list">
     <statistic-bar :unfinished-todos="unfinishedTodos" :finished-todos="finishedTodos"/>
 
-    <h3 v-if="unfinishedTodos!==0">unfinished todos</h3>
+    <h3 v-if="unfinishedTodos!==0">{{ $t('overviews.unfinished') }}</h3>
     <div class="todo-overview">
       <div v-for="todo in items" :key="todo.id" class="list">
         <todo-item :todo="todo" v-if="!todo.done" @remove-todo="deleteTodo"/>
@@ -12,7 +12,7 @@
 
     <div class="folding-bar" v-if="finishedTodos > 0">
       <h2 :class="`arrow-${this.finishedItemIsHidden ? 'right' : 'down'}`" @click="changeVisibility"></h2>
-      <h3>finished todos</h3>
+      <h3>{{ $t('overviews.finished') }}</h3>
     </div>
     <div class="todo-overview" v-if="!finishedItemIsHidden">
       <div v-for="todo in items" :key="todo.id" class="list">

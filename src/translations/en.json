@@ -1,0 +1,40 @@
+{
+  "topBar": {
+    "name": "Enter your name here",
+    "greeting": "Hello,",
+    "morning": "Good morning, ",
+    "afternoon": "Good afternoon, ",
+    "evening": "Good evening, "
+  },
+  "statistics": {
+    "name": "Statistics",
+    "finished": "Amount of finished todos: ",
+    "unfinished": "Amount of unfinished todos: "
+  },
+  "creation": {
+    "name": "Create a new todo",
+    "title": "Enter your todo here",
+    "hint": "what do you have in mind today?",
+    "priority": "choose a priority",
+    "high": "urgent",
+    "medium": "medium",
+    "normal": "normal",
+    "submit": "add"
+  },
+  "items": {
+    "delete": "delete"
+  },
+  "overviews": {
+    "finished": "Finished todos",
+    "unfinished": "Unfinished todos"
+  },
+  "pomodoro": {
+    "start": "start",
+    "stop": "stop",
+    "work": "Set work time",
+    "rest": "Set rest time",
+    "time": "minutes",
+    "leftWorkTime": "Work time left:",
+    "leftRestTime": "Rest time left:"
+  }
+}

@@ -3,36 +3,36 @@
 
     <div class="folding-bar">
       <h2 :class="`arrow-${this.isVisible ? 'down' : 'right'}`"  @click="toggleVisibility"></h2>
-      <h2>Create Todo</h2>
+      <h2>{{ $t('creation.name') }}</h2>
     </div>
 
     <form @submit.prevent="addTodoItem" v-if="isVisible">
 
-      <h4>what do you have in mind?</h4>
-      <input type="text" placeholder="type your todo here" v-model="input"/>
+      <h4>{{ $t('creation.hint') }}</h4>
+      <input type="text" :placeholder="$t('creation.title')" v-model="input"/>
 
-      <h4>pick a priority</h4>
+      <h4>{{ $t('creation.priority') }}</h4>
       <div class="options">
         <label>
           <input type="radio" name="category" value="high" v-model="priority"/>
           <span class="bubble high"></span>
-          high
+          {{ $t('creation.high') }}
         </label>
 
         <label>
           <input type="radio" name="category" value="medium" v-model="priority"/>
           <span class="bubble medium"></span>
-          medium
+          {{ $t('creation.medium') }}
         </label>
 
         <label>
           <input type="radio" name="category" value="normal" v-model="priority"/>
           <span class="bubble normal"></span>
-          normal
+          {{ $t('creation.normal') }}
         </label>
       </div>
 
-      <input type="submit" value="Add todo"/>
+      <input type="submit" :value="$t('creation.submit')"/>
     </form>
 
   </section>
@@ -48,7 +48,8 @@ export default {
       priority: "normal",
       isVisible: true
     }
-  },methods: {
+  },
+  methods: {
     addTodoItem() {
       if (this.input.trim() === "" || this.priority === "null") {
         this.input = "";
